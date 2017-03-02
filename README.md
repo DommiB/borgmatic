@@ -2,6 +2,14 @@ title: borgmatic
 
 <img src="static/borgmatic.svg" alt="borgmatic logo" style="width: 8em; float: right; padding-left: 1em;" />
 
+## Todo
+This is a fork from torsion/borgmatic. I'm trying to some new functions: 
+- Notification on dbus ( start backup, done, error). python-notify2
+- Notification config parameter (message etc)
+- User hooks bevor, after and on error (call user bash scrip). 
+ (Userscript for mounting shares) 
+
+
 ## Overview
 
 borgmatic (formerly atticmatic) is a simple Python wrapper script for the
