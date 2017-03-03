@@ -67,9 +67,9 @@ path_post_hook: /usr/bin/my_post_backup_script.sh
 #args_posr_hook: 
 
 #Error-backup hooks
-enable_pre_hook: True
-path_pre_hook: /usr/bin/my_error_backup_script.sh
-args_pre_hook: --debug 4
+enable_error_hook: True
+path_error_hook: /usr/bin/my_error_backup_script.sh
+args_error_hook: --debug 4
 
 
 [notifications]
@@ -86,11 +86,11 @@ msg_pre_notify: "This is the Pre-Backup notification on DBUS"
 icon_pre_notify: /home/bdk/myicon.png
 
 #Post-backup notifications
-enable_pre_notify:
-msg_pre_notify:
-icon_pre_notify:
+enable_post_notify: True
+msg_post_notify: 
+icon_post_notify:
 
 #Error-backup notifications
-enable_pre_notify:
-msg_pre_notify:
-icon_pre_notify:
+enable_error_notify: True
+msg_error_notify:
+icon_error_notify:

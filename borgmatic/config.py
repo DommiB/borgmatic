@@ -56,7 +56,44 @@ CONFIG_FORMAT = (
             option('checks', required=False),
             option('check_last', required=False),
         ),
+    ),
+    Section_format(
+        'hooks',
+        (
+            option('enable_pre_hook',value_type=bool, required=False ),
+            option('path_pre_hook', required=False ),
+            option('args_pre_hook', required=False ),
+           
+            option('enable_post_hook',value_type=bool, required=False ),
+            option('path_post_hook', required=False ),
+            option('args_post_hook', required=False ),
+            
+            option('enable_error_hook',value_type=bool, required=False ),
+            option('path_error_hook', required=False ),
+            option('args_error_hook', required=False ),
+
+        ),
+    ),
+    Section_format(
+        'notifications',
+        (
+            option('enable_pre_notify',value_type=bool, required=False ),
+            option('msg_pre_notify', required=False ),
+            option('icon_pre_notify', required=False ),
+           
+            option('enable_post_notify',value_type=bool, required=False ),
+            option('msg_post_notify', required=False ),
+            option('icon_post_notify', required=False ),
+            
+            option('enable_error_notify',value_type=bool, required=False ),
+            option('msg_error_notify', required=False ),
+            option('icon_error_notify', required=False ),
+
+            
+        ),
     )
+
+
 )
 
 
