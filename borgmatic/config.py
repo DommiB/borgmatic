@@ -60,34 +60,34 @@ CONFIG_FORMAT = (
     Section_format(
         'hooks',
         (
-            option('enable_pre_hook',value_type=bool, required=False ),
-            option('path_pre_hook', required=False ),
-            option('args_pre_hook', required=False ),
+            option('pre_hook_enable',value_type=bool, required=False ),
+            option('pre_hook_path', required=False ),
+            option('pre_hook_args', required=False ),
            
-            option('enable_post_hook',value_type=bool, required=False ),
-            option('path_post_hook', required=False ),
-            option('args_post_hook', required=False ),
+            option('post_hook_enable',value_type=bool, required=False ),
+            option('post_hook_path', required=False ),
+            option('post_hook_args', required=False ),
             
-            option('enable_error_hook',value_type=bool, required=False ),
-            option('path_error_hook', required=False ),
-            option('args_error_hook', required=False ),
+            option('error_hook_enable',value_type=bool, required=False ),
+            option('error_hook_path', required=False ),
+            option('error_hook_args', required=False ),
 
         ),
     ),
     Section_format(
         'notifications',
         (
-            option('enable_pre_notify',value_type=bool, required=False ),
-            option('msg_pre_notify', required=False ),
-            option('icon_pre_notify', required=False ),
+            option('pre_notify_enable',value_type=bool, required=False ),
+            option('pre_notify_msg', required=False ),
+            option('pre_notify_icon', required=False ),
            
-            option('enable_post_notify',value_type=bool, required=False ),
-            option('msg_post_notify', required=False ),
-            option('icon_post_notify', required=False ),
+            option('post_notify_enable',value_type=bool, required=False ),
+            option('post_notify_msg', required=False ),
+            option('post_notify_icon', required=False ),
             
-            option('enable_error_notify',value_type=bool, required=False ),
-            option('msg_error_notify', required=False ),
-            option('icon_error_notify', required=False ),
+            option('error_notify_enable',value_type=bool, required=False ),
+            option('error_notify_msg', required=False ),
+            option('error_notify_icon', required=False ),
 
             
         ),
@@ -202,3 +202,16 @@ def parse_configuration(config_filename, config_format):
             for section_format in config_format
         )
     )
+
+
+
+
+def split_configs(cfg):
+    """
+    Todo: What happen if for example the script name contains pre_ ? -> not good...
+    """
+    _cfg_pre = {k.replace('pre_',''): v for k, v in cfg.items() if 'pre' in k }
+    _cfg_post = {k.replace('post_',''): v for k, v in cfg.items() if 'post' in k }
+    _cfg_error = {k.replace('error_',''): v for k, v in cfg.items() if 'error' in k }
+    return _cfg_pre,_cfg_post,_cfg_error
+

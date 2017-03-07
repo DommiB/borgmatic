@@ -57,19 +57,19 @@ checks: repository archives
 #args_xxx_hook		: Optional arguments for the script, space-seperated (optional)
 
 #Pre-backup hooks
-enable_pre_hook: True
-path_pre_hook: /usr/bin/my_pre_backup_script.sh
-args_pre_hook: -la -w --dir
+pre_hook_enable: True
+pre_hook_path: /usr/bin/my_pre_backup_script.sh
+pre_hook_args: -la -w --dir
 
 #Post-backup hooks
-enable_post_hook: True
-path_post_hook: /usr/bin/my_post_backup_script.sh
-#args_posr_hook: 
+post_hook_enable: True
+post_hook_path: /usr/bin/my_post_backup_script.sh
+#post_hook_args: 
 
 #Error-backup hooks
-enable_error_hook: True
-path_error_hook: /usr/bin/my_error_backup_script.sh
-args_error_hook: --debug 4
+error_hook_enable: True
+error_hook_path: /usr/bin/my_error_backup_script.sh
+error_hook_args: --debug 4
 
 
 [notifications]
@@ -81,16 +81,16 @@ args_error_hook: --debug 4
 #icon_xxx_notify: Path to the notification icon (optional)
 
 #Pre-backup notifications
-enable_pre_notify: True
-msg_pre_notify: "This is the Pre-Backup notification on DBUS"
-icon_pre_notify: /home/bdk/myicon.png
+pre_notify_enable: True
+pre_notify_msg: "This is the Pre-Backup notification on DBUS"
+pre_notify_icon: /home/bdk/my-icon.png
 
 #Post-backup notifications
-enable_post_notify: True
-msg_post_notify: 
-icon_post_notify:
+post_notify_enable: False
+post_notify_msg: "This is the post bla bla bla" 
+post_notify_icon:
 
 #Error-backup notifications
-enable_error_notify: True
-msg_error_notify:
-icon_error_notify:
+error_notify_enable: True
+error_notify_msg:
+error_notify_icon:
