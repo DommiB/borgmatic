@@ -58,7 +58,7 @@ checks: repository archives
 
 #Pre-backup hooks
 pre_hook_enable: True
-pre_hook_path: /usr/bin/my_pre_backup_script.sh
+pre_hook_path: ./sample/example.sh
 pre_hook_args: -la -w --dir
 
 #Post-backup hooks
@@ -68,7 +68,7 @@ post_hook_path: /usr/bin/my_post_backup_script.sh
 
 #Error-backup hooks
 error_hook_enable: True
-error_hook_path: /usr/bin/my_error_backup_script.sh
+error_hook_path: ./sample/example.sh
 error_hook_args: --debug 4
 
 
@@ -92,5 +92,5 @@ post_notify_icon:
 
 #Error-backup notifications
 error_notify_enable: True
-error_notify_msg:
+error_notify_msg:"ERROR ERROR ERROR "
 error_notify_icon:

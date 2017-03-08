@@ -61,7 +61,7 @@ def main():
         print ("Some Borg action")
         run_user_hook(hook_cfg_post)
         send_user_notification(nfc_cfg_post)
-    except (ValueError, IOError, CalledProcessError) as error:
+    except (ValueError, IOError, CalledProcessError,FileNotFoundError) as error:
         print(error, file=sys.stderr)
         run_user_hook(hook_cfg_error)
         send_user_notification(nfc_cfg_error)

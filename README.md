@@ -4,10 +4,12 @@ title: borgmatic
 
 ## Todo
 This is a fork from torsion/borgmatic. I'm trying to some new functions: 
-- Notification on dbus ( start backup, done, error). python-notify2
-- Notification config parameter (message etc)
-- User hooks bevor, after and on error (call user bash scrip). 
- (Userscript for mounting shares) 
+- ~~Notification on dbus ( start backup, done, error). python-notify2~~
+- ~~Notification config parameter (message etc)~~
+-- Add Timeout, Urgendlevel 
+- ~~User hooks bevor, after and on error (call user bash scrip).~~
+ (Userscript for mounting shares)
+-- Add pipeline from user script (redirect stdout...)?
 
 
 ## Overview
